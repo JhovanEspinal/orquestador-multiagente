@@ -1,0 +1,10 @@
+langgraph>=1.2
+aiosqlite>=0.22
+langchain-core>=1.7
+langchain-anthropic>=1.7
+langchain-openai>=1.7
+langchain-ollama>=1.1
+anthropic>=2.5
+openai>=3.45
+pydantic>=2.14
+python-dotenv>=1.2
