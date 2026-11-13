@@ -6,17 +6,17 @@ Ejemplo de solicitud: *"Compara lo que opinan los clientes de los audífonos Aur
 
 ## Grafo
 
-Diagrama generado con `graph.get_graph().draw_mermaid()`. Las flechas punteadas son aristas condicionales.
+Diagrama generado a partir de `graph.get_graph().draw_mermaid()`. Las flechas punteadas son aristas condicionales.
 
 ```mermaid
 graph TD;
-	__start__([__start__]):::first
+	__start__([__start__])
 	supervisor(supervisor)
 	researcher(researcher)
 	analyst(analyst)
 	validator(validator)
 	synthesizer(synthesizer)
-	__end__([__end__]):::last
+	__end__([__end__])
 	__start__ --> supervisor;
 	analyst --> supervisor;
 	researcher --> supervisor;
@@ -26,10 +26,11 @@ graph TD;
 	validator -.-> supervisor;
 	validator -.-> synthesizer;
 	synthesizer --> __end__;
-	classDef default fill:#f2f0ff,line-height:1.2
-	classDef first fill-opacity:0
-	classDef last fill:#bfb6fc
 ```
+
+La misma imagen en PNG, para visores que no muestran Mermaid:
+
+![Grafo del orquestador multi-agente](docs/grafo.png)
 
 | Nodo | Rol | Escribe en el estado |
 |---|---|---|
